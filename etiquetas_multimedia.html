@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Etiquetas Multimedia</title>
+		<link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+	</head>
+	<body>
+		<!-- imagenes -local-web-textoAlternativo-title -->
+		<img
+			src="./photo.jpg"
+			title="Es una camara antigua"
+			alt="Esta es una imagen."
+			width="500px"
+		/>
+		<!-- usando html5, figure y figcaption -->
+		<div>
+			<img src="" alt="" />
+		</div>
+		<figure>
+			<img src="./photo.jpg" width="500px" alt="" />
+			<figcaption>Esto es una foto antigua.</figcaption>
+		</figure>
+		<!-- usando picture -->
+		<picture>
+			<source srcset="./photo.jpg" media="(min-width: 1000px)" />
+			<source
+				srcset="
+					https://cdn.pixabay.com/photo/2020/10/24/06/42/thunderstorm-5680651__340.jpg
+				"
+				media="(min-width: 600px)"
+			/>
+			<img
+				width="500"
+				src="https://cdn.pixabay.com/photo/2020/10/18/18/42/bulb-5665770__340.jpg"
+				alt="foco"
+			/>
+		</picture>
+		<!-- video (controlls muted autoplay poster) - aplicando source (src - type) - -->
+		<video
+			poster="./photo.jpg"
+			controls
+			src="./MattSimons.webm"
+			width="400px"
+			autoplay
+			muted
+		></video>
+		<!-- audio - aplicando source (src - type) - -->
+		<audio src="./music.mpeg" controls autoplay></audio>
+	</body>
+</html>
